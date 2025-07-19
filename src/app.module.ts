@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
+import { ContactModule } from './modules/contact/contact.module';
 
 @Module({
   imports: [
@@ -14,6 +15,9 @@ import { DatabaseModule } from './database/database.module';
 
     // Database connection (MongoDB)
     DatabaseModule,
+
+    // Feature modules
+    ContactModule,
   ],
   controllers: [AppController],
   providers: [AppService],
